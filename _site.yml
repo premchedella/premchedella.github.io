@@ -1,0 +1,25 @@
+title: "Abdal Rameen"
+author: "Abdal Rameen"
+date: "`r Sys.Date()`"
+
+output_dir: "."
+
+navbar:
+  title: "Abdal Rameen"
+  left:
+    - text: Publications
+      href: "#pub"
+  right:
+    - icon: ai-google-scholar ai-lg
+      href: https://scholar.google.co.in/citations?user=kEQimk0AAAAJ&hl=en
+    - icon: fab fa-github fa-lg
+      href: http://github.com/RameenAbdal
+      
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    toc_collapsed: true
+    theme: cosmo
+    includes:
+      in_header: favicon.html
