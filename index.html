@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+       
+<meta name="google-site-verification" content="vSa-36HHKIzsGNaQjJ5ET4O4tuG9xsHbsJuMiD_kar8" />
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Rameen Abdal</title>
+
+<script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/cosmo.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+
+
+<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+
+<link rel="manifest" href="favicon_io/site.webmanifest">
+<link rel="stylesheet" href="css/academicons.min.css"/>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-sm-12 col-md-4 col-lg-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-sm-12 col-md-8 col-lg-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Rameen Abdal</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+<!--       <ul class="nav navbar-nav">
+        <li>
+  <a href="#pub">Publications</a>
+</li>
+      </ul> -->
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://scholar.google.co.in/citations?user=kEQimk0AAAAJ&hl=en">
+    <span class="ai ai-google-scholar ai-lg"></span>
+
+  </a>
+</li>
+<li>
+  <a href="https://github.com/RameenAbdal">
+    <span class="fab fa-github fa-lg"></span>
+
+  </a>
+</li>
+<li>
+  <a href="https://www.youtube.com/channel/UC12XCfA0B4c8sOosUoW9Y9A">
+    <span class="fab fa-youtube fa-lg"></span>
+
+  </a>
+</li>
+</li>
+<li>
+  <a href="https://twitter.com/abdalrameen?lang=en">
+    <span class="fab fa-twitter fa-lg"></span>
+
+  </a>
+</li>
+<li>
+  <a href="https://in.linkedin.com/in/rameen-abdal">
+    <span class="fab fa-linkedin fa-lg"></span>
+
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+
+</div>
+
+
+<div class="row">
+<h1 class="optima" id="home">
+About me
+</h1>
+</div>
+<div class="row">
+<div class="column_info" style="column-gap:5px">
+<p><span> I am currently a Ph.D. candidate in <a href="https://cemse.kaust.edu.sa/vcc">VCC</a>, <a href="https://www.kaust.edu.sa/en">KAUST</a>, supervised by Prof. <a href="http://peterwonka.net/">Peter Wonka</a>. I work closely with Prof. <a href="http://www0.cs.ucl.ac.uk/staff/n.mitra/">Niloy Mitra</a> (UCL and Adobe Research).
+  Before that, I obtained the MS degree from <a href="https://www.kaust.edu.sa/en">KAUST</a>, KSA, and the B.Tech degree from <a href="https://nitsri.ac.in/">National Institute of Technology (NIT) , Srinagar</a>, India.
+  My research is mainly related to representation learning and generative modeling. I am interested in problems lying in the intersection of the fields of Computer Graphics and Computer Vision. Currently
+  my research is focused on unsupervised shape reconstruction and semantic image editing, geometry extraction,
+  and performing various weakly supervised and unsupervised downstream tasks using Generative Adversarial
+  Networks (GANs). </span></p>
+       
+  <p><span> You can find my full CV <a href="https://rameenabdal.github.io/files/rameen_resume.pdf">here</a>. </span></p>
+       
+<!--    <p><span>* <i> Important: Deep learning based facial imagery like DeepFakes and GAN generated images can be gravely misused. This can spread misinformation and lead to other offences.
+          The intent of our work is not to promote such practices but instead be used in the areas such as security and identification (novel views of a subject, occlusion inpainting, facial composites, superresolution, DeepFake detection, building robust face recognition systems etc.),
+          image/video compression (high quality video conferencing at lower bitrates), and animations among other educational and medical applications. 
+          For example, we were informed that some insights of our works are being used in research concerning assistance for lip cleft and craniofacial surgeries in children :) </i>*</span></p> -->
+
+</div>
+<figure>
+<p>
+<img class="img-circle" src="images/view.png"
+height="100px" width="auto" align="center">
+</p>
+</figure>
+</div>
+<div class="row">
+<h1 class="optima" id="pub">
+Publications <!---<a href="https://orcid.org/0000-0003-3114-3517" style="color: #b2c046;font-size:22px"><i class="ai ai-orcid ai-lg"></i></a>&nbsp;<a href="https://arxiv.org/a/ren_j_2.html" style="color: #b31b1b; font-size:22px"><i class="ai ai-arxiv ai-lg"></i></a>&nbsp;<a href="https://scholar.google.com/citations?user=qkadBVcAAAAJ&hl=en" style="color: gray; font-size:22px"><i class="ai ai-google-scholar ai-lg"></i></a>&nbsp;<a href="https://github.com/llorz" style="color:#A34DAD; font-size:22px"><i class="fab fa-github fa-lg"></i></a>
+--->
+</h1>
+</div>
+
+<!--<div class="row" style="margin-top:-5px">-->
+<!--<p>Jump to year:   <a href="#2021" style="font-family:optima">2021</a>,  <a href="#2020" style="font-family:optima">2020</a>,  <a href="#2019" style="font-family:optima">2019</a>,  <a href="#2018" style="font-family:optima">2018</a>,  <a href="#2017" style="font-family:optima">2017</a>.</p>-->
+<!--</div>-->
+
+<div class="row" style="margin-top:-5px; margin-bottom:0px">
+  <h3 class="optima" id="2023">
+    2023
+  </h3>
+</div>
+       
+<div class="row">
+  <div class="column_paper" style="column-gap:20px">
+    <span class="optima"> <strong>3DAvatarGAN: Bridging Domains for Personalized Editable Avatars</strong> </span><br> <span> <u>Rameen Abdal</u>, <a href = "http://hsinyinglee.com/">Hsin-Ying Lee</a>, <a href = "https://scholar.google.com/citations?user=Gn8URq0AAAAJ&hl=en">Peihao Zhu</a>, <a href="https://mlchai.com/">Menglei Chai</a>, <a href="https://aliaksandrsiarohin.github.io/aliaksandr-siarohin-website/"> Aliaksandr Siarohin</a> , <a
+        href="http://peterwonka.net/">Peter Wonka</a>,<a href="http://www.stulyakov.com/">Sergey Tulyakov</a> </span><br> <span> <em>Proc. IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2023</em> </span><br> <span> <a href="https://arxiv.org/pdf/2301.02700.pdf"><i
+          class="fas fa-file-pdf"></i> paper</a> <a href="https://rameenabdal.github.io/3DAvatarGAN/"><i class="fas fa-video"></i>
+        suppl.</a> </span><br>
+    </p>
+  </div>
+  <figure>
+    <p>
+      <img src="images/avatar.png" height="70px" width="auto" align="right">
+  </figure>
+</div>
+
+<div class="row" style="margin-top:-5px; margin-bottom:0px">
+  <h3 class="optima" id="2022">
+    2022
+  </h3>
+</div>
+       
+<div class="row">
+  <div class="column_paper" style="column-gap:20px">
+    <span class="optima"> <strong>Video2StyleGAN: Disentangling Local and Global Variations in a Video</strong> </span><br> <span> <u>Rameen Abdal</u>, <a href = "https://scholar.google.com/citations?user=Gn8URq0AAAAJ&hl=en">Peihao Zhu</a>, <a href="http://www0.cs.ucl.ac.uk/staff/n.mitra/">Niloy J. Mitra</a> , <a
+        href="http://peterwonka.net/">Peter Wonka</a> </span><br> <span> <em>ArXiv pre-print, 2022</em> </span><br> <span> <a href="https://arxiv.org/abs/2205.13996"><i
+          class="fas fa-file-pdf"></i> paper</a> <a href="https://youtu.be/oUeXFyfdE1A"><i class="fas fa-video"></i>
+        suppl.</a> </span><br>
+    </p>
+  </div>
+  <figure>
+    <p>
+      <img src="images/vsg.png" height="70px" width="auto" align="right">
+  </figure>
+</div>
+
+<div class="row">
+  <div class="column_paper" style="column-gap:20px">
+    <span class="optima"> <strong>HairNet: Hairstyle Transfer with Pose Changes</strong> </span><br> <span> <a href = "https://scholar.google.com/citations?user=Gn8URq0AAAAJ&hl=en">Peihao Zhu</a>, <u>Rameen Abdal</u>, <a
+        href="https://scholar.google.com/citations?user=rS1xJIIAAAAJ&hl=en">John Femiani</a>, <a
+        href="http://peterwonka.net/">Peter Wonka</a> </span><br> <span> <em>Proc. European Conference on Computer Vision (ECCV), 2022</em> </span><br> <span> <a href="https://t.co/o6wCeFGTP9"><i
+          class="fas fa-file-pdf"></i> paper</a> <a href="https://youtu.be/WBB43cgCFZM"><i class="fas fa-video"></i>
+        suppl.</a> </span><br>
+    </p>
+  </div>
+  <figure>
+    <p>
+      <img src="images/HairNet.png" height="70px" width="auto" align="right">
+  </figure>
+</div>
+
+
+<div class="row">
+  <div class="column_paper" style="column-gap:20px">
+    <span class="optima"> <strong>CLIP2StyleGAN: Unsupervised Extraction of StyleGAN Edit Directions</strong> </span><br> <span> <u>Rameen Abdal</u>
+          ,<a href = "https://scholar.google.com/citations?user=Gn8URq0AAAAJ&hl=en">Peihao Zhu</a>,<a
+        href="https://scholar.google.com/citations?user=rS1xJIIAAAAJ&hl=en">John Femiani</a>, <a href="http://www0.cs.ucl.ac.uk/staff/n.mitra/">Niloy J. Mitra</a>,<a
+        href="http://peterwonka.net/">Peter Wonka</a> </span><br> <span> <em>ACM SIGGRAPH Conference Proceedings, 2022 (Selected for Lab Demo)</em> </span><br> <span> <a href="https://arxiv.org/abs/2112.05219"><i
+          class="fas fa-file-pdf"></i> paper</a> <a href="https://github.com/RameenAbdal/CLIP2StyleGAN"> <i class="fas fa-code"></i> code</a> <a href="https://youtu.be/Qmi4m09wHig"><i class="fas fa-video"></i>
+        suppl.</a>  </span><br>
+    </p>
+  </div>
+  <figure>
+    <p>
+      <img src="images/Clip2StyleGAN.png" height="70px" width="auto" align="right">
+  </figure>
+</div>
+
+
+
+  <div class="row">
+    <div class="column_paper" style="column-gap:20px">
+    <span class="optima"> <strong>Mind the Gap: Domain Gap Control for Single Shot Domain Adaptation for Generative Adversarial Networks</strong> </span><br> <span> <a href = "https://scholar.google.com/citations?user=Gn8URq0AAAAJ&hl=en">Peihao Zhu</a>, <u>Rameen Abdal</u>, <a href="https://scholar.google.com/citations?user=rS1xJIIAAAAJ&hl=en">John Femiani</a>,  <a href="http://peterwonka.net/">Peter Wonka</a> </span><br> <span> <em>International Conference on Learning Representations (ICLR), 2022</em> </span><br> <span> <a href="https://arxiv.org/abs/2110.08398"><i class="fas fa-file-pdf"></i> paper</a> <a href="https://github.com/ZPdesu/MindTheGap"> <i class="fas fa-code"></i> code</a>  <a href="https://youtu.be/RLBJ-mem9gM"><i class="fas fa-video"></i> suppl.</a> </span><br>
+    </p>
+    </div>
+    <figure>
+    <p>
+    <img src="images/mind_the_gap.png"
+    height="50px" width="auto"
+    align="right">
+    </figure>
+    </div>
+
+  
+<div class="row" style="margin-top:-5px; margin-bottom:0px">
+<h3 class="optima" id="2021">
+2021
+</h3>
+</div>
+<!---
+<hr width="60px" align="right" style="margin-top:-5px; border-width: 1px; margin-bottom:-3px" >
+--->
+
+
+<div class="row">
+<div class="column_paper" style="column-gap:20px">
+<span class="optima"> <strong>Barbershop: GAN-based Image Compositing using Segmentation Masks</strong> </span><br> <span> <a href = "https://scholar.google.com/citations?user=Gn8URq0AAAAJ&hl=en">Peihao Zhu</a>, <u>Rameen Abdal</u>,  <a href="https://scholar.google.com/citations?user=rS1xJIIAAAAJ&hl=en">John Femiani</a>,  <a href="http://peterwonka.net/">Peter Wonka</a> </span><br> <span> <em>ACM Transactions on Graphics (Proc. SIGGRAPH Asia), 2021</em> </span><br> <span> <a href="https://arxiv.org/abs/2106.01505"><i class="fas fa-file-pdf"></i> paper</a>  <a href="https://github.com/ZPdesu/Barbershop"><i class="fas fa-code"></i> code</a>  <a href="https://youtu.be/ZU-yrAvoJfQ"><i class="fas fa-video"></i> suppl.</a> <a href = "https://youtu.be/YNY_ZEuDncM"><i class="fas fa-video"></i> Two Minute Papers</a></span><br>
+</p>
+</div>
+<figure>
+<p>
+<img src="images/barbershop.png"
+height="70px" width="auto"
+align="right">
+</figure>
+</div>
+
+
+<div class="row">
+<div class="column_paper" style="column-gap:20px">
+<span class="optima"> <strong>StyleFlow: Attribute-conditioned exploration of stylegan-generated images using conditional continuous normalizing flows</strong> </span><br> <span> <u>Rameen Abdal</u>, <a href = "https://scholar.google.com/citations?user=Gn8URq0AAAAJ&hl=en">Peihao Zhu</a>, <a href="http://www0.cs.ucl.ac.uk/staff/n.mitra/">Niloy J. Mitra</a>, <a href="http://peterwonka.net/">Peter Wonka</a> </span><br> <span> <em>ACM Transactions on Graphics (TOG), 2021</em> </span><br> <span> <a href="https://arxiv.org/abs/2008.02401"><i class="fas fa-file-pdf"></i> paper</a>  <a href="https://github.com/RameenAbdal/StyleFlow"><i class="fas fa-code"></i> code</a>  <a href="https://youtu.be/LRAUJUn3EqQ"><i class="fas fa-video"></i> suppl.</a> <a href = "https://youtu.be/Lt4Z5oOAeEY"><i class="fas fa-video"></i> Two Minute Papers</a></span><br>
+</p>
+</div>
+<figure>
+<p>
+<img src="images/styleFlow.png"
+height="70px" width="auto" align="right">
+</figure>
+</div>
+
+<div class="row">
+  <div class="column_paper" style="column-gap:20px">
+  <span class="optima"> <strong>Improved StyleGAN Embedding: Where are the Good Latents?</strong> </span><br> <span> <a href = "https://scholar.google.com/citations?user=Gn8URq0AAAAJ&hl=en">Peihao Zhu</a>, <u>Rameen Abdal</u>, <a href="https://scholar.google.com/citations?user=ojgWPpgAAAAJ&hl=en">Yipeng Qin</a>, <a href="https://scholar.google.com/citations?user=rS1xJIIAAAAJ&hl=en">John Femiani</a>,  <a href="http://peterwonka.net/">Peter Wonka</a> </span><br> <span> <em>ArXiv pre-print, 2021</em> </span><br> <span> <a href="https://arxiv.org/abs/2012.09036"><i class="fas fa-file-pdf"></i> paper</a> <a href"https://github.com/ZPdesu/II2S"><i class="fas fa-code"></i> code</a> <a href="https://youtu.be/6grbAFtKvBU"><i class="fas fa-video"></i> suppl.</a> </span><br>
+  </p>
+  </div>
+  <figure>
+  <p>
+  <img src="images/II2S.png"
+  height="70px" width="auto"
+  align="right">
+  </figure>
+  </div>
+  
+
+<div class="row">
+<div class="column_paper" style="column-gap:20px">
+<span class="optima"> <strong>Labels4Free: Unsupervised Segmentation using StyleGAN</strong> </span><br> <span> <u>Rameen Abdal</u>, <a href = "https://scholar.google.com/citations?user=Gn8URq0AAAAJ&hl=en" >Peihao Zhu</a>, <a href="http://www0.cs.ucl.ac.uk/staff/n.mitra/">Niloy J. Mitra</a>, <a href="http://peterwonka.net/">Peter Wonka</a> </span><br> <span> <em>Proc. IEEE International Conference on Computer Vision (ICCV), 2021</em> </span><br> <span> <a href="https://arxiv.org/abs/2103.14968"><i class="fas fa-file-pdf"></i> paper</a>  <a href="https://rameenabdal.github.io/Labels4Free/"><i class="fas fa-code"></i> code</a>  <a href="https://youtu.be/_pHunGpvLVk"><i class="fas fa-video"></i> suppl.</a> </span><br>
+</p>
+</div>
+<figure>
+<p>
+<img src="images/label4free.png"
+height="70px" width="auto" align="right">
+</figure>
+</div>
+
+
+
+
+<div class="row" style="margin-top:-5px; margin-bottom:0px">
+<h3 class="optima" id="2020">
+2020
+</h3>
+</div>
+
+<div class="row">
+<div class="column_paper" style="column-gap:20px">
+<span class="optima"> <strong>SEAN: Image Synthesis with Semantic Region-Adaptive Normalization</strong> </span><br> <span>  <a href="https://scholar.google.com/citations?user=Gn8URq0AAAAJ&hl=en">Peihao Zhu</a>,  <u>Rameen Abdal</u>, <a href="https://scholar.google.com/citations?user=ojgWPpgAAAAJ&hl=en">Yipeng Qin</a>, <a href="http://peterwonka.net/">Peter Wonka</a> </span><br> <span> <em>Proc. IEEE Conference on Computer Vision and Pattern Recognition (CVPR Oral), 2020</em> </span><br> <span> <a href="https://arxiv.org/abs/1911.12861"><i class="fas fa-file-pdf"></i> paper</a>  <a href="https://github.com/ZPdesu/SEAN"><i class="fas fa-code"></i> code</a>  <a href="https://youtu.be/gqpMm0Ml2ZM"><i class="fas fa-video"></i> suppl.</a> </span><br>
+</p>
+</div>
+<figure>
+<p>
+<img src="images/sean.png"
+height="70px" width="auto" align="right">
+</figure>
+</div>
+
+<div class="row">
+  <div class="column_paper" style="column-gap:20px">
+  <span class="optima"> <strong>Image2StyleGAN++: How to Edit the Embedded Images?</strong> </span><br> <span> <u>Rameen Abdal</u>, <a href="https://scholar.google.com/citations?user=ojgWPpgAAAAJ&hl=en">Yipeng Qin</a>, <a href="http://peterwonka.net/">Peter Wonka</a> </span><br> <span> <em>Proc. IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2020</em> </span><br> <span> <a href="https://arxiv.org/abs/1911.11544"><i class="fas fa-file-pdf"></i> paper</a>  <a href="https://www.youtube.com/watch?v=kEKVSMTTQEI"><i class="fas fa-video"></i> suppl.</a> </span><br>
+  </p>
+  </div>
+  <figure>
+  <p>
+  <img src="images/i2s_plus.png"
+  height="70px" width="auto" align="right">
+  </figure>
+  </div>
+
+<div class="row" style="margin-top:-5px; margin-bottom:0px">
+  <h3 class="optima" id="2020">
+  2019
+  </h3>
+  </div>
+  
+  <div class="row">
+  <div class="column_paper" style="column-gap:20px">
+  <span class="optima"> <strong>Image2StyleGAN: How to Embed Images into the StyleGAN Latent Space?</strong> </span><br> <span> <u>Rameen Abdal</u>, <a href="https://scholar.google.com/citations?user=ojgWPpgAAAAJ&hl=en">Yipeng Qin</a>, <a href="http://peterwonka.net/">Peter Wonka</a> </span><br> <span> <em>Proc. IEEE International Conference on Computer Vision (ICCV Oral), 2019</em> </span><br> <span> <a href="https://arxiv.org/abs/1904.03189"><i class="fas fa-file-pdf"></i> paper</a>  <a href="https://www.youtube.com/watch?v=RnTXLXw9o_I"><i class="fas fa-video"></i> suppl.</a> </span><br>
+  </p>
+  </div>
+  <figure>
+  <p>
+  <img src="images/i2s.jpeg"
+  height="70px" width="auto" align="right">
+  </figure>
+  </div>
+ 
+<div class="row">
+<h1 class="optima">
+Patents
+</h1>
+</div>
+
+  <div class="row">
+  <div class="column_paper" style="column-gap:20px">
+  <span class="optima"> <strong>Attibute Conditioned Image Generation</strong> </span><br> <span> <a href="http://www0.cs.ucl.ac.uk/staff/n.mitra/">Niloy Mitra</a>, <a href="http://peterwonka.net/">Peter Wonka</a>, <u>Rameen Abdal</u>, <a href="https://scholar.google.com/citations?user=Gn8URq0AAAAJ&hl=en">Peihao Zhu</a> </span><br> <span> <em> US Patent (US 16934858) , 2022 </em> </span><br> <span> <a href="https://patents.google.com/patent/US20220028139A1/en"><i class="fas fa-file-pdf"></i> link </a> </span><br>
+  </p>
+  </div>
+  </div>  
+
+
+
+<div class="row">
+<h1 class="optima">
+Education
+</h1>
+</div>
+<div class="row">
+<!-- <div class="column2"> -->
+<p>
+<img src="images/kaust_logo.jpg" style="height:55px; margin-right:5px" align="left"> <span> Ph.D. in Computer Science </span><br> <span class="optima"> <strong>KAUST, Visual Computing Center</strong> </span><br> <span> <em>2020 - Present</em> </span>
+</p>
+</div>
+<!-- <div class="column2"> -->
+<div class="row">
+<p>
+<img src="images/kaust_logo.jpg" style="height:55px; margin-right:5px" align="left"> <span> <span> M.Sc. in Computer Science </span><br> <span class="optima"> <strong>KAUST, Visual Computing Center</strong> </span><br> <span> <em>2018 - 2020</em> </span>
+</p>
+</div>
+<!-- <div class="column4"> -->
+<div class="row">
+<p>
+<img src="images/neu.png" style="height:60px; margin-right:5px" align="left"> <span> B.Tech in Electronics and Communication Engineering </span><br> <span class="optima"> <strong> NIT Srinagar </strong> </span><br> <span> <em>2014 - 2018</em> </span>
+</p>
+</div>
+<!-- </div> -->
+<!-- <p><br></p> -->
+
+<div class="row">
+  <h1 class="optima">
+    Research Experience
+  </h1>
+</div>
+
+<div class="row">
+  <div class="column2">
+    <p>
+      <img src="images/snapchat.png" style="height:55px; margin-right:5px" align="left"><strong>Snap Research</strong> 
+      <span><br> Research Intern @ Creative Vision
+        <span><br> Los Angeles, USA
+         </span><br> <span class="optima"> 
+      </span><em>June 2022 - Oct 2022</em> </span>
+    </p>
+  </div>
+
+  <div class="column2">
+    <p>
+      <img src="images/adobe.png" style="height:55px; margin-right:5px" align="left"><strong>Adobe Research</strong> 
+      <span> <br> Collaborator (Remote)
+        <span> <br> London, UK
+         </span><br> <span class="optima"> 
+      </span><em>March 2020 - May 2022</em> </span>
+    </p>
+  </div>
+
+</div>
+<!-- <p><br></p> -->
+
+
+<div class="row">
+<h1 class="optima">
+Talks
+</h1>
+</div>
+
+ <div class="row">
+  <div class="column_paper" style="column-gap:20px">
+  <span class="optima"> <strong> Stanford Computational Imaging Lab, 2022 </strong><br>
+    <i> EXTRACTING SEMANTICS, GEOMETRY, AND APPEARANCE USING GANS  </i> <br>
+<b> Stanford University, USA </b>    
+  </p>
+  </div>
+   </div>
+        
+   <div class="row">
+  <div class="column_paper" style="column-gap:20px">
+  <span class="optima"> <strong> Rising Stars in AI Symposium (organized by Jurgen Schmidhuber), 2022 </strong><br>
+    <i> EXTRACTING SEMANTICS, GEOMETRY, AND APPEARANCE USING GANS  </i> <br>
+<b>KAUST, KSA </b>    
+  </p>
+  </div>
+   </div>
+          
+  <div class="row">
+  <div class="column_paper" style="column-gap:20px">
+  <span class="optima"> <strong> Adobe Research, 2022 </strong><br>
+    <i> EXTRACTING SEMANTICS, GEOMETRY, AND APPEARANCE USING STYLEGAN  </i> <br>
+<b>San Jose, USA </b>    
+  </p>
+  </div>
+  </div>
+
+<div class="row">
+<h1 class="optima">
+Ethics and Social Impact
+</h1>
+</div>
+<div class="row">
+<div class="column_info" style="column-gap:5px">
+       <p><span> <i>(<a href="https://rameenabdal.github.io/files/ethics.pdf">see more</a>)</i></span></p>
+
+</div>
+</div>
+<p><br></p> 
+
+<div class="row">
+<h1 class="optima">
+Contact
+</h1>
+</div>
+<div class="row">
+<!-- <div class="column3"> -->
+<p>
+<strong>Address</strong><br>KAUST,
+Thuwal, Saudi Arabia
+</div>
+<div class="row">
+<!-- <div class="column3"> -->
+<p>
+<strong>Email</strong><br>rameen.abdal@kaust.edu.sa
+</div>
+<div class="row">
+<!-- <div class="column3"> -->
+<p>
+<strong>Phone</strong><br>+1 (310) 437-3893
+</div>
+
+<!-- </div> -->
+<p><br></p>
+
+<!-- <script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5hukwyys48q&amp;m=7&amp;c=e63100&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=90&amp;lx=-420&amp;ly=420&amp;hi=20&amp;he=7&amp;hc=a8ddff&amp;rs=80" async="async"></script> -->
+<!-- <div style="display:inline-block;width:400px;"><script type="text/javascript" src="//rf.revolvermaps.com/0/0/7.js?i=5wp4ynpc37f&amp;m=0&amp;c=00ff6c&amp;cr1=baff00&amp;br=20&amp;sx=0&amp;cdb=54ff00" async="async"></script></div> -->
+
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/7.js?i=5hukwyys48q&amp;m=7&amp;c=e63100&amp;cr1=ffffff&amp;;f=arial&amp;l=0&amp;bv=90&amp;lx=-420&amp;ly=420&amp;hi=20&amp;he=7&amp;hc=a8ddff&amp;rs=80" async="async"></script>
+
+<style type="text/css">
+#TOC {
+  left: 50px;
+  width: 200px;
+  margin: 20px 0px 0px 0px;
+}
+
+.main-container {
+    margin-left: 20px;
+}
+</style>
+<style type="text/css">
+       
+.column4 {
+  float: left;
+  margin-left: 5px;
+  margin-right: 0px;
+  width: 20%;
+}
+.column {
+  float: left;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 20%;
+}
+
+.column2 {
+  float: left;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 50%;
+}
+
+.column3 {
+  float: left;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 33%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+.column_info {
+  float: left;
+  margin-left: 0px;
+  width: 85%
+}
+
+.column_paper {
+  float: left;
+  margin-left: 5px;
+  width: 73%
+}
+
+.left_paper {
+  width: 27%;
+}
+
+
+.img-circle {
+    border-radius: 50%;
+}
+
+
+
+h1.optima{
+  font-size: 25px;
+  font-family: optima;
+  margin-bottom: 10pt
+}
+
+
+h3.optima{
+  font-size: 20px;
+  font-family: optima;
+  color:#2880e3
+}
+
+
+span.optima{font-family:optima, Sans-serif}
+</style>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
