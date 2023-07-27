@@ -477,6 +477,22 @@ Projects Carried-out
 </div>
 
 <div class="row">
+<h2 class="optima">
+1. Create Human Dataset
+</h2>
+Designed and developed a pipeline for the human dataset creation. Developed using Python, PyTorch and huggingface APIs.  Following are the different pipelines:
+<ol>
+  <li>Download parquet files from <a href="https://huggingface.co/datasets/laion/laion2B-en/tree/main">LAION-2B</a> dataset.</li>
+  <li>Filter the parquet file for the image resolution and write the filtered data to the parquet file.</li>
+  <li>Download the parquet file, which is over 500GB of data.</li>
+  <li>Filter the images for object (person) and bounding box resolution, probability score using <strong>Mask RCNN</strong>.</li>
+  <li>Filter the images for all 17 key points and bounding box resolution, probability score using <strong>key point RCNN</strong>.</li>
+  <li>Filter the images using <strong>CLIP</strong>.  For example, CLIP prompts are "a photo of a toy", "a photo of a book", "a photo of a frame", "a photo of a magazine” </li>.
+</ol>
+
+</div>
+
+<div class="row">
 <p>
 <strong>ARRIS (Motorola Mobility)</strong><br>
 </div>
