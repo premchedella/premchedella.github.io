@@ -614,9 +614,18 @@ Developed using C++, Qt, and <italics>pdftotext.exe</italics>, a third party lib
 
 <div class="row">
 <p>
-<strong> 7. Mesh Terrain Rendering using UNREAL Engine</strong>
+<strong> 7. Mesh Terrain or Digital Elevation Model(DEM) Rendering using UNREAL Engine4</strong>
 <p>
-Developed UNREAL engine.
+Design and develop a plugin for reading into UE4 (Unreal Engine4) elevation data that can be used for displaying a 3D mesh of terrain of the world.
+
+<ol>
+<li>Parse ASCII file that represents a grid of elevation data from a SRTM tile using C++ inside a UE4 plugin.</li>
+<li>Dynamically generating a procedural mesh inside UE4. </li>
+<li>Parse the grid data and store into an UE4 3Dvector array representing vertices. </li>
+<li>Create triangles from the vertices using the grid layout. </li>
+<li>Create a new function in the plugin that will use the vertices and triangles from the grid layout to replace the vertices and triangles. </li>
+<li>Rendered of the elevation data in UE4, Used the lat/long information to spatially locate the tile, Added texture to the elevation data, Drawing on top of the mesh for simple mission planning.</li>
+</ol>
 </div>
 
 <p>
