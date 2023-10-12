@@ -666,6 +666,22 @@ Following are the different applications/tools used for prototyping:
 <p>
 <strong> 9. SFM Automation</strong>
 <p>
+Construct a complete geometry mesh using <a href="https://github.com/simonfuhrmann/mve">Multi View Environment </a> and <a href = "https://colmap.github.io/">Colmap</a>.
+<br>
+The MVE is installed on the Linux Machine and Colmap installed on the Windows Machine.  These machines are servers.
+
+Following is the procedure:
+<ol>
+<li>Read the JPEG images which has geo tag, get the Latitude and Longitude information.</li>
+<li>Based on the no. of available machines where MVE and Colmap is present and no. of images, cluster these images (k-means, KdTree). </li>
+<li>Transfer the clustered images on the servers.</li>
+<li>Get the mesh for the clustered images.</li>
+<li>Combine the clustered meshes into a bigger mesh. </li>
+</ol>
+Developed using C++, Qt, a numner of third party libraries, libssh, libcurl.
+
+<br> The code is available at <a href = "https://github.com/premchedella/sfmautomation">Git HUB SFM Automation</a>.
+
 </div>
 <p>
 <p>
